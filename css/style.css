@@ -258,7 +258,7 @@ nav li a:hover,#menuIcon:hover {
     position:absolute;
     top:0;
     left:0;
-    width:110px;
+    width:85px;
     font-weight:bold;
     font-size:13px;
     color:#ffffff;
@@ -274,7 +274,7 @@ nav li a:hover,#menuIcon:hover {
 .skillbar-title span {
     display:block;
     background:rgba(0, 0, 0, 0.1);
-    padding:0 20px;
+    padding:0 9px;
     height:35px;
     line-height:35px;
     -webkit-border-top-left-radius:3px;
