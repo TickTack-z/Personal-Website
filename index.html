@@ -16,36 +16,7 @@
 </head>
 <body>
 <div id="main">
-	<nav>
-		<a href="#" id="menuIcon">Ξ</a>
-		<ul>
-			<li>
-				<a href="index.html" id="index">HOME</a>
-			</li>
-			<li>
-				<a href="resume.html" id="resume">RESUME</a>
-			</li>
-			<li>
-				<a href="experience.html" id="experience">EXPERIENCE</a>
-			</li>
-			<li>
-				<a href="project.html" id="project">PROJECT</a>
-			</li>
-		</ul>
-	</nav>
-	<aside>
-		<center>
-			<img class="avatar" src="img/avatar.png" alt="avatar">
-		</center>
-		<ul>
-			<li>Aaron Zhou earned his master degree at Columbia University, specializing in data science, development and business analysis. </li>
-		</ul>
-	</aside>
-
-	<section class="post">
-		<article id="article">
-		</article>
-	</section>
+	<div id="react"></div>
 	<section class="infoRight">
 		<p>
 			<img src="http://counter.www.umich.edu/counter?link=www-personal.umich.edu/~sxzhou/index.html">
@@ -118,6 +89,512 @@
 		</ul>
 	</footer>
 </div>
+
+<script type="text/babel">
+    var divStyle = { fontSize:"12px"    };
+
+
+    class Welcome extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+                page: 0
+			}
+		}
+
+        render() {
+            if (this.state.page == 0) {
+                return (
+						<div>
+							<nav>
+								<a href={"#"} id={"menuIcon"}>Ξ</a>
+								<ul>
+									<li>
+										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+									</li>
+									<li>
+										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+									</li>
+									<li>
+										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+									</li>
+									<li>
+										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+									</li>
+								</ul>
+							</nav>
+							<aside>
+								<center>
+									<img class="avatar" src="img/avatar.png" alt="avatar" />
+								</center>
+								<ul>
+									<li>Aaron Zhou earned his master degree at Columbia University, specializing in data science, development and business analysis. </li>
+								</ul>
+							</aside>
+
+							<section className={"post"}>
+								<article id={"article"}>
+
+
+									<h1>
+										Sentimental BGM Chrome Extension: Live in Drama
+									</h1>
+								<p style={divStyle}>Oct. 2017 – Dec. 2017</p>
+								<hr></hr>
+								<p>
+									•	Created a chrome extension enhancing web surfing experience with NLP and music recommender system
+								</p>	<p>
+								•	Designed a hybrid recommender system that combined user collaborative filtering and sentiment analysis
+								</p>	<p>
+								•	Decreased MSE of user hit rate from naive benchmark 0.18 to 0.13
+
+								</p>
+									<br />
+
+							<h1>
+								Project: Text Normalization Challenge (Kaggle NLP competition)
+							</h1>
+							<p style={divStyle}>Oct. 2017 – Nov. 2017</p>
+								<hr></hr>
+								<p>
+									•	Applied XGBoost with context to label test data by using 10 GB training text (digit/ordinal/…)	</p><p>
+									•	Created label-wise regex functions to convert labeled text into normalized form (“$2” to “two dollars”)</p><p>
+									• Gained 99.03% accuracy compared to the 92.6% benchmark
+								</p>
+
+								<br />
+
+								<h1>
+									Project: Twitter Sentiment Map in Node.js
+								</h1>
+								<p style={divStyle}>Sept. 2017 – Oct. 2017</p>
+									<hr></hr>
+									<p>
+										•	Developed an AWS Elastic Beanstalk web application using Node.js in an auto-scaling environment
+									</p>	<p>	•	Used Twitter Stream API, Google Map API and AWS Elasticsearch geospatial feature allowing users to search tweets with sentiment analysis in a web UI based on keywords or clicked location
+										<img class="illustration" src="img/TwitterMap.jpg" title="sample pic" alt="Twitter"/>
+
+									</p>
+
+
+
+
+									<br />
+									<h1>
+										Business Analyst Intern @IBM, Shanghai, China
+									</h1>
+									<h1>
+										Client: SAIC Volkswagen (SVW)
+									</h1>
+									<p style={divStyle}>Jun. 2017 – Aug. 2017</p>
+									<hr></hr>
+									<p>
+										•	Worked within a team of 10+ developers in an Agile Software Development environment
+									</p><p>
+										•	Facilitated weekly meetings with clients to analyze requirements and explore potential solutions
+									</p>
+									<p>
+										•	Helped design relational database schema based on client’s business requirements</p>
+									<p>
+										•	Drafted and maintained product requirement documents (PRD), and align them with tangible deliverables such as user stories, user journey map, Axure prototype, functional specifications and technical requirements
+									</p><p>
+										•	Launched SVW E-commerce website (alpha version) in two months
+									</p>
+									<section className={"grid"}>
+										<div className={"item"}>
+											<img class="illustration1" src="img/SVW_1.jpg" title="main page" alt="main page"/>
+										</div>
+										<div className={"item"}>
+											<img class="illustration1" src="img/SVW_2.jpg" title="log in" alt="log in"/>
+										</div>
+										<div className={"item"}>
+											<img class="illustration1" src="img/SVW_3.jpg" title="car configuration" alt="car configuration"/>
+										</div>
+									</section>
+
+
+									<br />
+									<h1>
+										Project: Dynamic Pricing under Competition (INFORMS Challenge)
+									</h1>
+									<p style={divStyle}>Mar. 2017 – May 2017</p>
+										<hr></hr>
+										<p>
+											•	Coded Python module learning in a competitive environment competing for revenue with fellow participants
+										</p><p>
+											•	Applied EM algorithm to mixed multinomial logit model, used sorted SAA to estimate competitors’ prices
+										</p><p>
+											•	Beat 90% competitors and kept stable revenue over iterations
+										</p>
+
+
+										<br />
+										<h1>
+											Application Intern @Jennison Associates LLC, New York
+										</h1>
+										<p style={divStyle}>Oct. 2016 – Feb. 2017</p>
+											<hr></hr>
+											<p>
+												•	Responsible for maintaining data in Oracle database by performing data cleaning, transformation and ensuring integrity in a relational environment, conducted unit and functional testing
+											</p><p>
+												•	Created and executed automated test plans, cases and scripts to uncover, identify and document .NET system’s problems and their causes, guaranteed robust stability of the system
+											</p><p>
+												•	Designed and created system status dashboards showing buggy services
+											</p>
+
+											<br />
+											<h1>
+												Capstone Design: Pocket Lab – Remote VR Monitoring
+											</h1>
+											<h1>
+												Client: Siemens, Shanghai, China
+											</h1>
+											<p style={divStyle}>May 2016 – Aug. 2016</p>
+												<hr></hr>
+												<p>
+													•	Built a remote lab monitoring system using virtual reality and IoT technology, offering immersive user experiences
+												</p><p>
+													•	Developed Django cloud server processing data with Ubuntu, MySQL and web service, visualized real-time monitored data by presenting dashboard in website and tagged model in Android VR app	</p><p>
+													•	Created Django-based website visualizing real-time data by presenting HTML5 dashboard
+												</p><p>
+													•	Won Gold Award (top ranked) out of 30+ teams
+												</p>
+												<img className={"illustration"} src="img/VR.jpg" title="sample pic" alt="VR"/>
+
+
+												<br />
+												<br />
+												<h1>
+													Capstone Design: Dealership Ordering Optimization
+												</h1>
+												<h1>
+													Client: Urban Science, Detroit, Michigan
+												</h1>
+												<p style={divStyle}>Jan. 2016 – Apr. 2016 </p>
+													<hr></hr>
+													<p>
+														•	Developed linear programming algorithm in Python suggesting optimal inventory level for dealers
+													</p><p>
+														•	Predicted car sales and lead time by regularized regression, took customers’ preference into consideration
+													</p><p>
+														•	Increased $60K annual profit per dealer in simulation
+													</p>
+
+													<br />
+													<h1>
+														Research Assistant @University of Michigan Transportation Research Institute, Ann Arbor, MI
+													</h1>
+												<p style={divStyle}>May 2015 – Aug. 2015 </p>
+													<hr></hr>
+													<p>
+														•	Programmed Python web scraper automating readability assessment for technical documents
+													</p>
+													<p>
+														•	Analyzed score inconsistency among different tools by using ANOVA and bootstrap aggregating, investigated in detailed implementation difference and gave suggestions on required sample length
+													</p>
+													<p>
+														•	Published a quantitative research paper in journal IEEE TPC:
+
+														<a href="http://ieeexplore.ieee.org/document/7839917/?reload=true">http://ieeexplore.ieee.org/document/7839917/?reload=true</a>
+													</p>
+													<br />
+								</article>
+							</section>
+
+						</div>
+                )
+            }
+            else if (this.state.page == 1){
+				return (
+						<div>
+							<nav>
+								<a href={"#"} id={"menuIcon"}>Ξ</a>
+								<ul>
+									<li>
+										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+									</li>
+									<li>
+										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+									</li>
+									<li>
+										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+									</li>
+									<li>
+										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+									</li>
+								</ul>
+							</nav>
+							<aside>
+								<center>
+									<img class="avatar" src="img/avatar.png" alt="avatar" />
+								</center>
+								<ul>
+									<li>Aaron Zhou earned his master degree at Columbia University, specializing in data science, development and business analysis. </li>
+								</ul>
+							</aside>
+
+							<section className={"post"}>
+								<article id={"article"}>
+									<center>
+									<h1>
+										<a href="pdf/aaron_zhou_resume.pdf" id="download">Download Aaron's resume</a>
+									</h1></center>
+								<object style={{width: "100%",  height: "800px"}} data="pdf/aaron_zhou_resume.pdf"></object>
+
+								</article>
+							</section>
+						</div>)
+			}
+			else if (this.state.page == 2){
+                return (
+						<div>
+							<nav>
+								<a href={"#"} id={"menuIcon"}>Ξ</a>
+								<ul>
+									<li>
+										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+									</li>
+									<li>
+										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+									</li>
+									<li>
+										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+									</li>
+									<li>
+										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+									</li>
+								</ul>
+							</nav>
+							<aside>
+								<center>
+									<img class="avatar" src="img/avatar.png" alt="avatar" />
+								</center>
+								<ul>
+									<li>Aaron Zhou earned his master degree at Columbia University, specializing in data science, development and business analysis. </li>
+								</ul>
+							</aside>
+
+							<section className={"post"}>
+								<article id={"article"}>
+
+									<h1>
+										Business Analyst Intern @IBM, Shanghai, China
+									</h1>
+									<h1>
+										Client: SAIC Volkswagen (SVW)
+									</h1>
+									<p style={divStyle}>Jun. 2017 – Aug. 2017</p>
+									<hr></hr>
+									<p>
+										•	Worked within a team of 10+ developers in an Agile Software Development environment
+									</p><p>
+									•	Facilitated weekly meetings with clients to analyze requirements and explore potential solutions
+								</p>
+									<p>
+										•	Helped design relational database schema based on client’s business requirements</p>
+									<p>
+										•	Drafted and maintained product requirement documents (PRD), and align them with tangible deliverables such as user stories, user journey map, Axure prototype, functional specifications and technical requirements
+									</p><p>
+									•	Launched SVW E-commerce website (alpha version) in two months
+								</p>
+									<section className={"grid"}>
+										<div className={"item"}>
+											<img class="illustration1" src="img/SVW_1.jpg" title="main page" alt="main page"/>
+										</div>
+										<div className={"item"}>
+											<img class="illustration1" src="img/SVW_2.jpg" title="log in" alt="log in"/>
+										</div>
+										<div className={"item"}>
+											<img class="illustration1" src="img/SVW_3.jpg" title="car configuration" alt="car configuration"/>
+										</div>
+									</section>
+
+
+									<br />
+									<h1>
+										Application Intern @Jennison Associates LLC, New York
+									</h1>
+									<p style={divStyle}>Oct. 2016 – Feb. 2017</p>
+									<hr></hr>
+									<p>
+										•	Responsible for maintaining data in Oracle database by performing data cleaning, transformation and ensuring integrity in a relational environment, conducted unit and functional testing
+									</p><p>
+									•	Created and executed automated test plans, cases and scripts to uncover, identify and document .NET system’s problems and their causes, guaranteed robust stability of the system
+								</p><p>
+									•	Designed and created system status dashboards showing buggy services
+								</p>
+
+
+									<br />
+									<h1>
+										Research Assistant @University of Michigan Transportation Research Institute, Ann Arbor, MI
+									</h1>
+									<p style={divStyle}>May 2015 – Aug. 2015 </p>
+									<hr></hr>
+									<p>
+										•	Programmed Python web scraper automating readability assessment for technical documents
+									</p>
+									<p>
+										•	Analyzed score inconsistency among different tools by using ANOVA and bootstrap aggregating, investigated in detailed implementation difference and gave suggestions on required sample length
+									</p>
+									<p>
+										•	Published a quantitative research paper in journal IEEE TPC:
+
+										<a href="http://ieeexplore.ieee.org/document/7839917/?reload=true">http://ieeexplore.ieee.org/document/7839917/?reload=true</a>
+									</p>
+									<br />
+								</article>
+							</section>
+
+
+						</div>)
+			}
+            else {
+                return (
+						<div>
+							<nav>
+								<a href={"#"} id={"menuIcon"}>Ξ</a>
+								<ul>
+									<li>
+										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+									</li>
+									<li>
+										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+									</li>
+									<li>
+										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+									</li>
+									<li>
+										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+									</li>
+								</ul>
+							</nav>
+							<aside>
+								<center>
+									<img class="avatar" src="img/avatar.png" alt="avatar" />
+								</center>
+								<ul>
+									<li>Aaron Zhou earned his master degree at Columbia University, specializing in data science, development and business analysis. </li>
+								</ul>
+							</aside>
+
+							<section className={"post"}>
+								<article id={"article"}>
+
+
+									<h1>
+										Sentimental BGM Chrome Extension: Live in Drama
+									</h1>
+									<p style={divStyle}>Oct. 2017 – Dec. 2017</p>
+									<hr></hr>
+									<p>
+										•	Created a chrome extension enhancing web surfing experience with NLP and music recommender system
+									</p>	<p>
+									•	Designed a hybrid recommender system that combined user collaborative filtering and sentiment analysis
+								</p>	<p>
+									•	Decreased MSE of user hit rate from naive benchmark 0.18 to 0.13
+
+								</p>
+									<br />
+
+									<h1>
+										Project: Text Normalization Challenge (Kaggle NLP competition)
+									</h1>
+									<p style={divStyle}>Oct. 2017 – Nov. 2017</p>
+									<hr></hr>
+									<p>
+										•	Applied XGBoost with context to label test data by using 10 GB training text (digit/ordinal/…)	</p><p>
+									•	Created label-wise regex functions to convert labeled text into normalized form (“$2” to “two dollars”)</p><p>
+									• Gained 99.03% accuracy compared to the 92.6% benchmark
+								</p>
+
+									<br />
+
+									<h1>
+										Project: Twitter Sentiment Map in Node.js
+									</h1>
+									<p style={divStyle}>Sept. 2017 – Oct. 2017</p>
+									<hr></hr>
+									<p>
+										•	Developed an AWS Elastic Beanstalk web application using Node.js in an auto-scaling environment
+									</p>	<p>	•	Used Twitter Stream API, Google Map API and AWS Elasticsearch geospatial feature allowing users to search tweets with sentiment analysis in a web UI based on keywords or clicked location
+									<img class="illustration" src="img/TwitterMap.jpg" title="sample pic" alt="Twitter"/>
+
+								</p>
+
+
+
+
+
+
+									<br />
+									<h1>
+										Project: Dynamic Pricing under Competition (INFORMS Challenge)
+									</h1>
+									<p style={divStyle}>Mar. 2017 – May 2017</p>
+									<hr></hr>
+									<p>
+										•	Coded Python module learning in a competitive environment competing for revenue with fellow participants
+									</p><p>
+									•	Applied EM algorithm to mixed multinomial logit model, used sorted SAA to estimate competitors’ prices
+								</p><p>
+									•	Beat 90% competitors and kept stable revenue over iterations
+								</p>
+
+
+
+									<br />
+									<h1>
+										Capstone Design: Pocket Lab – Remote VR Monitoring
+									</h1>
+									<h1>
+										Client: Siemens, Shanghai, China
+									</h1>
+									<p style={divStyle}>May 2016 – Aug. 2016</p>
+									<hr></hr>
+									<p>
+										•	Built a remote lab monitoring system using virtual reality and IoT technology, offering immersive user experiences
+									</p><p>
+									•	Developed Django cloud server processing data with Ubuntu, MySQL and web service, visualized real-time monitored data by presenting dashboard in website and tagged model in Android VR app	</p><p>
+									•	Created Django-based website visualizing real-time data by presenting HTML5 dashboard
+								</p><p>
+									•	Won Gold Award (top ranked) out of 30+ teams
+								</p>
+									<img className={"illustration"} src="img/VR.jpg" title="sample pic" alt="VR"/>
+
+
+									<br />
+									<br />
+									<h1>
+										Capstone Design: Dealership Ordering Optimization
+									</h1>
+									<h1>
+										Client: Urban Science, Detroit, Michigan
+									</h1>
+									<p style={divStyle}>Jan. 2016 – Apr. 2016 </p>
+									<hr></hr>
+									<p>
+										•	Developed linear programming algorithm in Python suggesting optimal inventory level for dealers
+									</p><p>
+									•	Predicted car sales and lead time by regularized regression, took customers’ preference into consideration
+								</p><p>
+									•	Increased $60K annual profit per dealer in simulation
+								</p>
+
+									<br />
+								</article>
+							</section>
+						</div>)
+            }
+        }
+    }
+
+    const element = <Welcome />;
+    ReactDOM.render(
+        element,
+        document.getElementById('react')
+    );
+</script>
 <script type="text/javascript">
     $(function(){
         $("#menuIcon,nav ul li").click(function(){
@@ -134,39 +611,6 @@
             };
         });
     })
-</script>
-
-<script type="text/babel">
-    var divStyle = {
- fontSize:"12px"
-    };
-    class Welcome extends React.Component {
-        render() {
-            return (
-                <div>
-                <h1>
-						Project: Text Normalization Challenge (Kaggle NLP competition)
-				</h1>
-                    <p style={divStyle}>
-						Oct. 2017 – Nov. 2017
-</p>
-					<hr></hr>
-						<p>
-							•	Applied XGBoost with context to label test data by using 10 GB training text (digit/ordinal/…)	</p><p>
-						•	Created label-wise regex functions to convert labeled text into normalized form (“$2” to “two dollars”)</p><p>
-						• Gained 99.03% accuracy compared to the 92.6% benchmark
-					</p>
-
-				</div>
-			)
-        }
-    }
-
-    const element = <Welcome />;
-    ReactDOM.render(
-        element,
-        document.getElementById('article')
-    );
 </script>
 </body>
 </html>
