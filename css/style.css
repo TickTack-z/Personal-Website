@@ -4,6 +4,9 @@ body {
     margin: 0;
 }
 
+.show {
+    display: block;
+}
 
 img{
     max-width:100%;

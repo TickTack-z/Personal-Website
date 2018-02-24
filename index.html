@@ -98,7 +98,8 @@
         constructor(props){
             super(props);
             this.state={
-                page: 0
+                page: 0,
+				className: "not_show"
 			}
 		}
 
@@ -107,19 +108,19 @@
                 return (
 						<div>
 							<nav>
-								<a href={"#"} id={"menuIcon"}>Ξ</a>
-								<ul>
+								<a href={"#"} id={"menuIcon"} onClick={()=> {var temp = this.state.className =="show"? "not_show": "show";  this.setState({className: temp});}}>Ξ</a>
+								<ul className={this.state.className}>
 									<li>
-										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+										<a href="#" id="index" className={this.state.className} onClick={() => this.setState({page: 0, className: "not_show"})}>HOME</a>
 									</li>
 									<li>
-										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+										<a href="#" id="resume" className={this.state.className}  onClick={() => this.setState({page: 1, className: "not_show"})}>RESUME</a>
 									</li>
 									<li>
-										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+										<a href="#" id="experience"  className={this.state.className}  onClick={() => this.setState({page: 2, className: "not_show"})}>EXPERIENCE</a>
 									</li>
 									<li>
-										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+										<a href="#" id="project"  className={this.state.className}  onClick={() => this.setState({page: 3, className: "not_show"})}>PROJECT</a>
 									</li>
 								</ul>
 							</nav>
@@ -308,19 +309,19 @@
 				return (
 						<div>
 							<nav>
-								<a href={"#"} id={"menuIcon"}>Ξ</a>
-								<ul>
+								<a href={"#"} id={"menuIcon"} onClick={()=> {var temp = this.state.className =="show"? "not_show": "show";  this.setState({className: temp});}}>Ξ</a>
+								<ul className={this.state.className}>
 									<li>
-										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+										<a href="#" id="index" className={this.state.className} onClick={() => this.setState({page: 0, className: "not_show"})}>HOME</a>
 									</li>
 									<li>
-										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+										<a href="#" id="resume" className={this.state.className}  onClick={() => this.setState({page: 1, className: "not_show"})}>RESUME</a>
 									</li>
 									<li>
-										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+										<a href="#" id="experience"  className={this.state.className}  onClick={() => this.setState({page: 2, className: "not_show"})}>EXPERIENCE</a>
 									</li>
 									<li>
-										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+										<a href="#" id="project"  className={this.state.className}  onClick={() => this.setState({page: 3, className: "not_show"})}>PROJECT</a>
 									</li>
 								</ul>
 							</nav>
@@ -349,19 +350,19 @@
                 return (
 						<div>
 							<nav>
-								<a href={"#"} id={"menuIcon"}>Ξ</a>
-								<ul>
+								<a href={"#"} id={"menuIcon"} onClick={()=> {var temp = this.state.className =="show"? "not_show": "show";  this.setState({className: temp});}}>Ξ</a>
+								<ul className={this.state.className}>
 									<li>
-										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+										<a href="#" id="index" className={this.state.className} onClick={() => this.setState({page: 0, className: "not_show"})}>HOME</a>
 									</li>
 									<li>
-										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+										<a href="#" id="resume" className={this.state.className}  onClick={() => this.setState({page: 1, className: "not_show"})}>RESUME</a>
 									</li>
 									<li>
-										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+										<a href="#" id="experience"  className={this.state.className}  onClick={() => this.setState({page: 2, className: "not_show"})}>EXPERIENCE</a>
 									</li>
 									<li>
-										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+										<a href="#" id="project"  className={this.state.className}  onClick={() => this.setState({page: 3, className: "not_show"})}>PROJECT</a>
 									</li>
 								</ul>
 							</nav>
@@ -453,19 +454,19 @@
                 return (
 						<div>
 							<nav>
-								<a href={"#"} id={"menuIcon"}>Ξ</a>
-								<ul>
+								<a href={"#"} id={"menuIcon"} onClick={()=> {var temp = this.state.className =="show"? "not_show": "show";  this.setState({className: temp});}}>Ξ</a>
+								<ul className={this.state.className}>
 									<li>
-										<a href="#" id="index" onClick={() => this.setState({page: 0})}>HOME</a>
+										<a href="#" id="index" className={this.state.className} onClick={() => this.setState({page: 0, className: "not_show"})}>HOME</a>
 									</li>
 									<li>
-										<a href="#" id="resume" onClick={() => this.setState({page: 1})}>RESUME</a>
+										<a href="#" id="resume" className={this.state.className}  onClick={() => this.setState({page: 1, className: "not_show"})}>RESUME</a>
 									</li>
 									<li>
-										<a href="#" id="experience" onClick={() => this.setState({page: 2})}>EXPERIENCE</a>
+										<a href="#" id="experience"  className={this.state.className}  onClick={() => this.setState({page: 2, className: "not_show"})}>EXPERIENCE</a>
 									</li>
 									<li>
-										<a href="#" id="project" onClick={() => this.setState({page: 3})}>PROJECT</a>
+										<a href="#" id="project"  className={this.state.className}  onClick={() => this.setState({page: 3, className: "not_show"})}>PROJECT</a>
 									</li>
 								</ul>
 							</nav>
@@ -594,23 +595,6 @@
         element,
         document.getElementById('react')
     );
-</script>
-<script type="text/javascript">
-    $(function(){
-        $("#menuIcon,nav ul li").click(function(){
-            if ($("#menuIcon").is(":visible")) {
-                $("nav ul").toggle(300);
-            };
-        });
-        $( window ).resize(function() {
-            if (!$("nav ul").is(":visible")) {
-                $('nav ul').attr('style', function(i, style)
-                {
-                    return style.replace(/display[^;]+;?/g, '');
-                });
-            };
-        });
-    })
 </script>
 </body>
 </html>
