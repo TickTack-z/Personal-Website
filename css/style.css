@@ -7,6 +7,9 @@ body {
 .show {
     display: block;
 }
+.not_show{
+    display: none;
+}
 
 img{
     max-width:100%;
@@ -173,7 +176,7 @@ nav li a:hover,#menuIcon:hover {
     }
     #menuIcon {
         display: block;
-        text-align: right;
+        text-align: left;
         padding: 0 5px;
     }
 
@@ -209,11 +212,12 @@ nav li a:hover,#menuIcon:hover {
 
 
     nav ul{
-        width: 100%;
-        display: none;
+        width: 70%;
+        float:left;
         padding:0;
         margin: 0;
     }
+
 
     nav li a {
         margin-left:50px;
