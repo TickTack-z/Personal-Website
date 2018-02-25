@@ -214,6 +214,7 @@ nav li a:hover,#menuIcon:hover {
     nav ul{
         width: 70%;
         float:left;
+        display: none;
         padding:0;
         margin: 0;
     }
