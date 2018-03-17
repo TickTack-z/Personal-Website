@@ -4,6 +4,14 @@ body {
     margin: 0;
 }
 
+.extension{
+    width: 90%;
+}
+
+.illustration{
+    width: 90%;
+}
+
 
 img{
     max-width:100%;
