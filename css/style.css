@@ -4,14 +4,12 @@ body {
     margin: 0;
 }
 
-.extension{
-    width: 90%;
+.show {
+    display: block;
 }
-
-.illustration{
-    width: 90%;
+.not_show{
+    display: none;
 }
-
 
 img{
     max-width:100%;
@@ -178,7 +176,7 @@ nav li a:hover,#menuIcon:hover {
     }
     #menuIcon {
         display: block;
-        text-align: right;
+        text-align: left;
         padding: 0 5px;
     }
 
@@ -214,11 +212,13 @@ nav li a:hover,#menuIcon:hover {
 
 
     nav ul{
-        width: 100%;
+        width: 70%;
+        float:left;
         display: none;
         padding:0;
         margin: 0;
     }
+
 
     nav li a {
         margin-left:50px;
@@ -266,7 +266,7 @@ nav li a:hover,#menuIcon:hover {
     position:absolute;
     top:0;
     left:0;
-    width:110px;
+    width:85px;
     font-weight:bold;
     font-size:13px;
     color:#ffffff;
@@ -282,7 +282,7 @@ nav li a:hover,#menuIcon:hover {
 .skillbar-title span {
     display:block;
     background:rgba(0, 0, 0, 0.1);
-    padding:0 20px;
+    padding:0 9px;
     height:35px;
     line-height:35px;
     -webkit-border-top-left-radius:3px;
